@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nellai Muthu Vilas – Coimbatore's Finest Traditional Sweets since 1972</title>
+<meta name="description" content="Nellai Muthu Vilas — Coimbatore's finest traditional sweets since 1972. Pure ghee sweets, Tirunelveli Wheat Halwa, Kaju Katli, Mysore Pak, wedding & bulk orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:target { scroll-margin-top: 80px; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #000000;
+  color: #FFFFFF;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  overflow-x: hidden;
+}
+/* ===== AURORA BACKGROUND EFFECT ===== */
+.aurora-container {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+  background: #000000;
+}
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.14;
+  mix-blend-mode: screen;
+}
+.aurora-blob-1 {
+  width: 60vw; height: 60vw;
+  background: radial-gradient(circle, #5D1A96 0%, transparent 80%);
+  top: -20vh; left: -10vw;
+  animation: auroraAnimation1 25s ease-in-out infinite alternate;
+}
+.aurora-blob-2 {
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, #00FFCC 0%, transparent 80%);
+  bottom: -15vh; right: -10vw;
+  animation: auroraAnimation2 30s ease-in-out infinite alternate;
+}
+.aurora-blob-3 {
+  width: 55vw; height: 55vw;
+  background: radial-gradient(circle, #9B59B6 0%, transparent 80%);
+  top: 25vh; right: 10vw;
+  animation: auroraAnimation3 28s ease-in-out infinite alternate;
+}
+.aurora-blob-4 {
+  width: 45vw; height: 45vw;
+  background: radial-gradient(circle, #2ECC71 0%, transparent 80%);
+  bottom: 20vh; left: 15vw;
+  animation: auroraAnimation4 35s ease-in-out infinite alternate;
+}
+@keyframes auroraAnimation1 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { transform: translate(12vw, 8vh) scale(1.1) rotate(60deg); }
+}
+@keyframes auroraAnimation2 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { transform: translate(-8vw, -12vh) scale(1.15) rotate(-45deg); }
+}
+@keyframes auroraAnimation3 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { transform: translate(-6vw, 10vh) scale(0.9) rotate(90deg); }
+}
+@keyframes auroraAnimation4 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { transform: translate(10vw, -8vh) scale(1.05) rotate(-60deg); }
+}
+body.loaded { opacity: 1; }
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  --bg-primary: #1A0033;
+  --bg-secondary: #0A0A0A;
+  --accent: #9B59B6;
+  --accent-dark: #7B2FBE;
+  --accent-light: #D8B4FE;
+  --card-bg: #2D0057;
+  --text: #FFFFFF;
+  --nav-height: 80px;
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.3; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+@keyframes pricePulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(155,89,182,0); }
+  50% { box-shadow: 0 0 12px rgba(155,89,182,0.6); }
+}
+
+@keyframes rotateStar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes logoShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== NAVBAR ===== */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  background: rgba(26,0,51,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex; align-items: center;
+  padding: 0 2rem;
+  transition: all 0.5s ease;
+  animation: slideDown 0.9s ease-out 0.2s both;
+  border-bottom: 1px solid rgba(155, 89, 182, 0.15);
+}
+#navbar.shrunk {
+  height: 70px;
+  background: rgba(10,0,20,0.95);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 4px 30px rgba(155,89,182,0.2);
+}
+.nav-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.4s ease;
+}
+.nav-logo-img {
+  height: 42px;
+  width: auto;
+  filter: brightness(1.1) drop-shadow(0 0 6px rgba(155,89,182,0.4));
+  transition: all 0.4s ease;
+}
+#navbar.shrunk .nav-logo-img {
+  height: 36px;
+}
+.nav-logo-text {
+  background: linear-gradient(90deg, #D8B4FE 25%, #fff 50%, #D8B4FE 75%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.nav-logo:hover .nav-logo-text {
+  animation: logoShimmer 1.2s linear;
+}
+.nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
+.nav-links a {
+  color: #D8B4FE;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+.nav-links a:hover { color: #fff; }
+.nav-links a:hover::after { width: 100%; }
+
+/* SEARCH BAR IN HEADER */
+.nav-search-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(155, 89, 182, 0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+}
+.nav-search-container:focus-within {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(155, 89, 182, 0.3);
+}
+.nav-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.85rem;
+  width: 140px;
+  transition: width 0.3s ease;
+}
+.nav-search-input::placeholder {
+  color: rgba(216, 180, 254, 0.5);
+}
+.nav-search-icon {
+  color: var(--accent-light);
+  margin-right: 5px;
+  font-size: 0.9rem;
+}
+
+/* CART BUTTON IN HEADER */
+.nav-cart-btn {
+  background: rgba(155, 89, 182, 0.15);
+  border: 1px solid var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.nav-cart-btn:hover {
+  background: var(--accent);
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.4);
+}
+.cart-badge {
+  background: #E74C3C;
+  color: #fff;
+  font-size: 0.75rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 24px; height: 2px; background: #D8B4FE; display: block; transition: all 0.3s; }
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 1rem;
+  background: transparent;
+  perspective: 1000px;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: transparent;
+  animation: kenBurns 12s ease-in-out infinite alternate;
+  z-index: 0;
+  transform-origin: center;
+  transition: transform 0.1s ease-out;
+}
+.hero-grain {
+  position: absolute; inset: 0; z-index: 1; opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(155,89,182,0.4) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: glowPulse 4s ease-in-out infinite;
+  z-index: 1;
+  transition: opacity 0.1s ease-out;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(155,89,182,0.25);
+  z-index: 1;
+  animation: floatUp linear infinite;
+  opacity: 0;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 680px;
+  width: 95%;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+.hero-card-frame {
+  position: relative;
+  background: transparent;
+  padding: 4.5rem 3rem 4rem;
+  border-radius: 40px 16px 16px 16px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.4);
+  transform-style: preserve-3d;
+  width: 100%;
+}
+/* ===== 3D FLOATING CLOUDS FOR MAP ===== */
+.cloud-parallax-wrap {
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.floating-cloud {
+  display: block;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4));
+  animation: floatCloud 6s ease-in-out infinite alternate;
+}
+.cloud-glass {
+  fill: #FFFFFF;
+  stroke: #9B59B6;
+  stroke-width: 2.5;
+}
+@keyframes floatCloud {
+  0% { transform: translateY(0) scale(1) rotate(0deg); }
+  100% { transform: translateY(-12px) scale(1.03) rotate(1deg); }
+}
+.sks-frame-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+.kolam-watermark {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 320px;
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-card-content {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.hero-logo-img {
+  width: 130px;
+  height: auto;
+  margin: 0 auto 1.2rem;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(93, 26, 150, 0.25));
+  opacity: 0;
+  animation: fadeIn 1.2s cubic-bezier(0.25,0.46,0.45,0.94) 0.4s forwards;
+}
+.hero-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #4A1E86 0%, #1A237E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.8rem;
+  opacity: 0;
+  animation: fadeDown 1.2s cubic-bezier(0.25,0.46,0.45,0.94) 0.6s forwards;
+}
+.hero-tagline {
+  font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+  color: #3A3A3A;
+  margin-top: 0.2rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeUp 1.2s cubic-bezier(0.25,0.46,0.45,0.94) 0.8s forwards;
+}
+.hero-since {
+  font-size: 0.85rem;
+  color: #C59B27;
+  margin-top: 0.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0;
+  animation: fadeUp 1.2s cubic-bezier(0.25,0.46,0.45,0.94) 0.95s forwards;
+}
+.hero-cta {
+  display: inline-block;
+  margin-top: 2.2rem;
+  padding: 0.9rem 2.5rem;
+  background: #5D1A96;
+  color: #fff;
+  border: 1px solid #4A1E86;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  opacity: 0;
+  animation: fadeIn 1s cubic-bezier(0.25,0.46,0.45,0.94) 1.1s forwards;
+}
+.hero-cta:hover {
+  background: #1A237E;
+  border-color: #1A237E;
+  box-shadow: 0 8px 25px rgba(26, 35, 126, 0.4);
+}
+
+/* ===== REVOLVING WHITE TICKER BANNER ===== */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: #FFFFFF;
+  color: #000000;
+  padding: 1rem 0;
+  border-top: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
+  position: relative;
+  z-index: 10;
+}
+.ticker-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+.ticker-item {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.ticker-item::after {
+  content: '✦';
+  margin-left: 2rem;
+  color: var(--accent);
+}
+
+/* ===== SECTION COMMON ===== */
+section { padding: 6rem 1.5rem; }
+.container { max-width: 1200px; margin: 0 auto; }
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.section-heading.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; left: 0;
+  width: 60px; height: 3px;
+  background: var(--accent);
+}
+.section-subtext {
+  color: var(--accent-light);
+  font-size: 1.05rem;
+  max-width: 600px;
+  line-height: 1.7;
+  margin-top: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease 0.2s, transform 0.9s ease 0.2s;
+}
+.section-subtext.visible { opacity: 1; transform: translateY(0); }
+
+.divider {
+  width: 100%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent, var(--accent), transparent);
+  background-size: 200% auto;
+  margin: 0;
+  opacity: 0.4;
+}
+
+/* ===== SWEETS CATALOG ===== */
+#sweets { background: transparent; }
+.sweets-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Price Sort Toolbar */
+.sweets-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.toolbar-label {
+  font-size: 0.9rem;
+  color: var(--accent-light);
+  font-weight: 600;
+}
+.toolbar-select {
+  background: rgba(45, 0, 87, 0.6);
+  border: 1px solid rgba(155, 89, 182, 0.4);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.toolbar-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(155, 89, 182, 0.4);
+}
+.filter-btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+.filter-btn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(155, 89, 182, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-btn.active, .filter-btn:hover {
+  background: rgba(155, 89, 182, 0.2);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.sweets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+.sweet-card {
+  background: var(--card-bg);
+  border: 1px solid var(--accent-dark);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+  opacity: 0;
+  transform: translateY(40px);
+}
+.sweet-card.visible { opacity: 1; transform: translateY(0); }
+.sweet-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(155,89,182,0.55); }
+.card-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+.card-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.7s ease;
+}
+.sweet-card:hover .card-img-wrap img { transform: scale(1.05); }
+.img-overlay {
+  position: absolute; inset: 0;
+  background: rgba(45,0,87,0.4);
+  border-radius: 12px 12px 0 0;
+  z-index: 1;
+}
+.img-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, #1A0033 0%, transparent 60%);
+  z-index: 2;
+}
+.card-img-name {
+  position: absolute;
+  bottom: 12px; left: 14px; right: 14px;
+  z-index: 3;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+.price-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  z-index: 4;
+  background: #000;
+  border: 1px solid var(--accent);
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  animation: pricePulse 2.5s ease-in-out infinite;
+}
+.card-body { padding: 1.2rem; }
+.card-desc {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  height: 60px;
+  overflow: hidden;
+}
+.card-btn {
+  display: block;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border: 1px solid var(--accent);
+  padding: 0.7rem;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  transition: background 0.4s ease, letter-spacing 0.4s ease, border-color 0.4s ease;
+  border-radius: 4px;
+}
+.card-btn:hover {
+  background: var(--card-bg);
+  border-color: var(--accent-dark);
+  letter-spacing: 1px;
+}
+
+/* ===== ABOUT ===== */
+#about { background: transparent; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+.about-photo {
+  height: 380px;
+  background: #100020;
+  border-radius: 12px;
+  border: 1px solid var(--accent-dark);
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 1.1s ease, transform 1.1s ease;
+  overflow: hidden;
+  position: relative;
+}
+.about-photo.visible { opacity: 1; transform: translateX(0); }
+.about-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+.about-photo-tag {
+  position: absolute;
+  bottom: 15px; left: 15px;
+  background: rgba(10, 0, 20, 0.8);
+  border: 1px solid var(--accent);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  letter-spacing: 1px;
+  backdrop-filter: blur(5px);
+}
+.about-features { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.5rem; }
+.about-tag {
+  background: rgba(155,89,182,0.15);
+  border: 1px solid rgba(155,89,182,0.4);
+  color: var(--accent-light);
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.stat-box { text-align: center; }
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-light);
+}
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 0.3rem; }
+
+/* ===== TESTIMONIALS ===== */
+#testimonials { background: transparent; }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.testi-card {
+  background: var(--card-bg);
+  border: 1px solid var(--accent-dark);
+  border-radius: 12px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s ease, box-shadow 0.6s ease;
+}
+.testi-card.visible { opacity: 1; transform: translateY(0); }
+.testi-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(155,89,182,0.3); }
+.testi-stars { color: var(--accent); font-size: 1.1rem; margin-bottom: 0.8rem; }
+.testi-text { color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.7; font-style: italic; margin-bottom: 1.2rem; }
+.testi-author { color: var(--accent-light); font-weight: 600; font-size: 0.88rem; }
+.testi-location { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
+
+/* ===== INTERACTIVE BRANCHES & LOCATIONS SECTION ===== */
+#branches-section {
+  background: transparent;
+  border-top: 1px solid rgba(155,89,182,0.2);
+}
+.branches-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.branches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.branch-card {
+  background: rgba(45, 0, 87, 0.4);
+  border: 1px solid rgba(155, 89, 182, 0.2);
+  border-radius: 10px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.branch-card.active, .branch-card:hover {
+  background: var(--card-bg);
+  border-color: var(--accent);
+  box-shadow: 0 5px 20px rgba(155, 89, 182, 0.3);
+}
+.branch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.branch-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-light);
+}
+.branch-rating {
+  color: #F1C40F;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.branch-details {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+.branch-review-heading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.branch-review-quote {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  line-height: 1.4;
+  border-left: 2px solid var(--accent);
+  padding-left: 8px;
+}
+.map-container {
+  border-radius: 12px;
+  border: 1px solid var(--accent-dark);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  overflow: visible;
+  height: 480px;
+  position: sticky;
+  top: 100px;
+}
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+/* ===== CONTACT ===== */
+#contact { background: transparent; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+.contact-info-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  margin-bottom: 1.5rem;
+  opacity: 0; transform: translateY(15px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.contact-info-item.visible { opacity: 1; transform: translateY(0); }
+.contact-icon { font-size: 1.4rem; min-width: 2rem; color: var(--accent); }
+.contact-label { font-size: 0.8rem; color: var(--accent-light); text-transform: uppercase; letter-spacing: 1px; }
+.contact-val { color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.6; }
+
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label { font-size: 0.85rem; color: var(--accent-light); letter-spacing: 0.5px; }
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: rgba(45,0,87,0.5);
+  border: 1px solid rgba(155,89,182,0.4);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus { border-color: var(--accent); }
+.form-group textarea { min-height: 140px; resize: vertical; }
+.form-submit {
+  background: #000;
+  color: #fff;
+  border: 1px solid var(--accent);
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.form-submit:hover {
+  background: var(--card-bg);
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 20px rgba(155,89,182,0.3);
+}
+
+/* ===== FOOTER ===== */
+#footer {
+  background: transparent;
+  border-top: 1px solid rgba(155,89,182,0.2);
+  padding: 4rem 1.5rem 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+#footer.visible { opacity: 1; transform: translateY(0); }
+.footer-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.footer-brand-logo {
+  height: 48px;
+  width: auto;
+  filter: brightness(1.1) drop-shadow(0 0 8px rgba(155,89,182,0.3));
+}
+.footer-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--accent-light);
+}
+.footer-brand-desc { color: rgba(255,255,255,0.55); font-size: 0.88rem; line-height: 1.7; }
+.footer-col h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--accent-light);
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.6rem; }
+.footer-col ul li a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.3s ease;
+}
+.footer-col ul li a:hover { color: var(--accent-light); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(155, 89, 182, 0.15);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.82rem;
+}
+.footer-stars span {
+  display: inline-block;
+  color: var(--accent-light);
+  opacity: 0.4;
+  animation: rotateStar 20s linear infinite;
+}
+
+/* ===== STICKY FLOATING SOCIAL MEDIA PANEL ===== */
+.floating-social-panel {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.float-social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255,255,255,0.2);
+  fill: currentColor;
+}
+.float-social-btn:hover {
+  transform: translateY(-5px) scale(1.08);
+}
+.float-whatsapp {
+  background: #25D366;
+}
+.float-whatsapp:hover {
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+}
+.float-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.float-instagram:hover {
+  box-shadow: 0 8px 20px rgba(220, 39, 67, 0.5);
+}
+
+/* ===== BACK TO TOP ===== */
+#back-top {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  z-index: 999;
+  width: 44px; height: 44px;
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: var(--accent-light);
+  font-size: 1.2rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+#back-top.show { opacity: 1; pointer-events: all; }
+#back-top:hover { transform: translateY(-4px); }
+
+/* ===== MOBILE NAV PANEL ===== */
+#mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,0,20,0.97);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#mobile-nav.open { display: flex; }
+#mobile-nav a {
+  color: var(--accent-light);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+}
+#mobile-nav-close {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer;
+}
+
+/* ===== FORM SUCCESS TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  color: var(--accent-light);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== SHOPPING CART DRAWER ===== */
+.cart-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.cart-drawer-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.cart-drawer {
+  position: fixed;
+  top: 0; right: -420px;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  background: #140028;
+  border-left: 2px solid var(--accent);
+  z-index: 1200;
+  box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cart-drawer.open {
+  right: 0;
+}
+.cart-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(155, 89, 182, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-light);
+}
+.cart-close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+.cart-items-list {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.cart-empty-message {
+  color: rgba(216, 180, 254, 0.5);
+  text-align: center;
+  font-style: italic;
+  margin-top: 3rem;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(45, 0, 87, 0.4);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(155, 89, 182, 0.1);
+}
+.cart-item-details {
+  flex: 1;
+  margin-right: 1rem;
+}
+.cart-item-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+.cart-item-price-unit {
+  font-size: 0.85rem;
+  color: rgba(216, 180, 254, 0.7);
+}
+.cart-qty-control {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(0,0,0,0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(155, 89, 182, 0.2);
+}
+.cart-qty-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent-light);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0 4px;
+}
+.cart-qty-val {
+  font-size: 0.9rem;
+  width: 20px;
+  text-align: center;
+}
+.cart-item-remove {
+  background: transparent;
+  border: none;
+  color: #E74C3C;
+  cursor: pointer;
+  margin-left: 0.8rem;
+  font-size: 1.1rem;
+}
+
+/* Delivery Details form inside Cart Drawer */
+.cart-delivery-form {
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid rgba(155, 89, 182, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.cart-delivery-title {
+  font-weight: 700;
+  color: var(--accent-light);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.cart-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.cart-form-group label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.cart-form-input {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(155, 89, 182, 0.3);
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.cart-form-input:focus {
+  border-color: var(--accent);
+}
+.cart-form-textarea {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(155, 89, 182, 0.3);
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  width: 100%;
+  min-height: 55px;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.cart-form-textarea:focus {
+  border-color: var(--accent);
+}
+
+.cart-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(155, 89, 182, 0.2);
+  background: rgba(10, 0, 20, 0.6);
+}
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+.cart-checkout-btn {
+  width: 100%;
+  background: var(--accent-dark);
+  color: #fff;
+  border: 1px solid var(--accent);
+  padding: 0.9rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cart-checkout-btn:hover {
+  background: var(--accent);
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.4);
+}
+
+/* ===== CHECKOUT CONFIRMATION MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+}
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.checkout-modal {
+  background: #1F003A;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  box-shadow: 0 10px 45px rgba(0,0,0,0.6);
+  position: relative;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+.modal-overlay.open .checkout-modal {
+  transform: translateY(0);
+}
+.modal-success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--accent-light);
+  display: block;
+}
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+.modal-desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.modal-summary-box {
+  background: rgba(10, 0, 20, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  border: 1px solid rgba(155,89,182,0.2);
+}
+.modal-summary-title {
+  font-weight: 700;
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.modal-summary-items {
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255,255,255,0.75);
+}
+.modal-summary-total {
+  font-weight: 700;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 0.5rem;
+  text-align: right;
+  font-size: 1rem;
+}
+.modal-close-btn {
+  background: #000;
+  border: 1px solid var(--accent);
+  color: #fff;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modal-close-btn:hover {
+  background: var(--card-bg);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .about-grid, .contact-grid, .branches-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .about-photo { order: -1; }
+  .map-container { height: 350px; position: relative; top: 0; }
+}
+@media (max-width: 640px) {
+  .nav-links, .nav-search-container { display: none; }
+  .hamburger { display: flex; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .hero-logo { font-size: 2rem; }
+  .hero-logo-img { width: 100px; }
+  .sweets-header-wrap { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- AURORA BACKGROUND EFFECT -->
+<div class="aurora-container">
+  <div class="aurora-blob aurora-blob-1"></div>
+  <div class="aurora-blob aurora-blob-2"></div>
+  <div class="aurora-blob aurora-blob-3"></div>
+  <div class="aurora-blob aurora-blob-4"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <img src="logo.png" alt="Nellai Muthu Vilas Logo" class="nav-logo-img">
+      <span class="nav-logo-text">Nellai Muthu Vilas</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#sweets">Our Sweets</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#branches-section">Branches</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      
+      <!-- Search Input -->
+      <li>
+        <div class="nav-search-container">
+          <span class="nav-search-icon">🔍</span>
+          <input type="text" id="header-search" class="nav-search-input" placeholder="Search sweets...">
+        </div>
+      </li>
+      
+      <!-- Cart Icon -->
+      <li>
+        <button class="nav-cart-btn" onclick="toggleCartDrawer(true)">
+          🛒 Cart
+          <span class="cart-badge" id="cart-counter">0</span>
+        </button>
+      </li>
+    </ul>
+    
+    <!-- Mobile Hamburger and Mobile Cart -->
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <button class="nav-cart-btn" onclick="toggleCartDrawer(true)" style="display: none; padding: 0.4rem 0.8rem;" id="mobile-cart-btn">
+        🛒 <span class="cart-badge" id="mobile-cart-counter">0</span>
+      </button>
+      <div class="hamburger" id="hamburger-btn" onclick="document.getElementById('mobile-nav').classList.add('open')">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobile-nav">
+  <button id="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('open')">✕</button>
+  <a href="#sweets" onclick="document.getElementById('mobile-nav').classList.remove('open')">Our Sweets</a>
+  <a href="#about" onclick="document.getElementById('mobile-nav').classList.remove('open')">About Us</a>
+  <a href="#branches-section" onclick="document.getElementById('mobile-nav').classList.remove('open')">Branches</a>
+  <a href="#testimonials" onclick="document.getElementById('mobile-nav').classList.remove('open')">Reviews</a>
+  <a href="#contact" onclick="document.getElementById('mobile-nav').classList.remove('open')">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+
+  <!-- Floating particles -->
+  <div class="particle" style="width:8px;height:8px;left:10%;bottom:-10%;animation-duration:22s;animation-delay:1.2s;background:rgba(155,89,182,0.2)"></div>
+  <div class="particle" style="width:6px;height:6px;left:25%;bottom:-10%;animation-duration:26s;animation-delay:1.4s;background:rgba(216,180,254,0.15)"></div>
+  <div class="particle" style="width:12px;height:12px;left:50%;bottom:-10%;animation-duration:20s;animation-delay:1.6s;background:rgba(155,89,182,0.3)"></div>
+  <div class="particle" style="width:7px;height:7px;left:70%;bottom:-10%;animation-duration:28s;animation-delay:1.8s;background:rgba(216,180,254,0.2)"></div>
+  <div class="particle" style="width:10px;height:10px;left:85%;bottom:-10%;animation-duration:24s;animation-delay:2.0s;background:rgba(155,89,182,0.25)"></div>
+  <div class="particle" style="width:14px;height:14px;left:40%;bottom:-10%;animation-duration:18s;animation-delay:2.2s;background:rgba(123,47,190,0.15)"></div>
+
+  <div class="hero-content">
+    <div class="hero-card-frame">
+      <!-- SKS-style frame SVG -->
+      <svg class="sks-frame-svg" viewBox="0 0 1000 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="card-shape">
+            <path d="M 60,0 L 984,0 A 16 16 0 0 1 1000 16 L 1000 584 A 16 16 0 0 1 984 600 L 16 600 A 16 16 0 0 1 0 584 L 0,60 A 60 60 0 0 1 60 0 Z" />
+          </clipPath>
+        </defs>
+        <!-- White card background with custom rounded corners -->
+        <path d="M 60,0 L 984,0 A 16 16 0 0 1 1000 16 L 1000 584 A 16 16 0 0 1 984 600 L 16 600 A 16 16 0 0 1 0 584 L 0,60 A 60 60 0 0 1 60 0 Z" fill="#FFFFFF" />
+        <!-- Top blue wave banner clipped to card shape -->
+        <path d="M 0,0 L 1000,0 L 1000,35 L 250,35 C 170,35 120,85 35,85 C 15,85 0,70 0,50 Z" fill="#1A237E" clip-path="url(#card-shape)" />
+        <!-- Left purple border curving at the top left -->
+        <path d="M 7,600 L 7,60 A 53 53 0 0 1 60 7 L 200 7" stroke="#5D1A96" stroke-width="14" fill="none" vector-effect="non-scaling-stroke" stroke-linecap="round" />
+      </svg>
+      
+      <!-- Tamil Kolam watermark SVG -->
+      <svg class="kolam-watermark" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="rgba(93, 26, 150, 0.08)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 200,100 C 230,100 250,120 250,150 C 250,180 230,200 200,200 C 170,200 150,180 150,150 C 150,120 170,100 200,100 Z" />
+          <path d="M 200,200 C 230,200 250,220 250,250 C 250,280 230,300 200,300 C 170,300 150,280 150,250 C 150,220 170,200 200,200 Z" />
+          <path d="M 150,150 C 150,180 130,200 100,200 C 70,200 50,180 50,150 C 50,120 70,100 100,100 C 130,100 150,120 150,150 Z" />
+          <path d="M 250,150 C 250,180 270,200 300,200 C 330,200 350,180 350,150 C 350,120 330,100 300,100 C 270,100 250,120 250,150 Z" />
+          <path d="M 100,100 C 100,50 150,50 150,100 C 150,150 100,150 100,100 Z" />
+          <path d="M 300,100 C 300,50 250,50 250,100 C 250,150 300,150 300,100 Z" />
+          <path d="M 100,300 C 100,350 150,350 150,300 C 150,250 100,250 100,300 Z" />
+          <path d="M 300,300 C 300,350 250,350 250,300 C 250,250 300,250 300,300 Z" />
+          <path d="M 200,50 C 220,50 230,70 230,90 C 230,110 210,130 200,130 C 190,130 170,110 170,90 C 170,70 180,50 200,50 Z" />
+          <path d="M 200,350 C 220,350 230,330 230,310 C 230,290 210,270 200,270 C 190,270 170,290 170,310 C 170,330 180,350 200,350 Z" />
+          <path d="M 50,200 C 50,220 70,230 90,230 C 110,230 130,210 130,200 C 130,190 110,170 90,170 C 70,170 50,180 50,200 Z" />
+          <path d="M 350,200 C 350,220 330,230 310,230 C 290,230 270,210 270,200 C 270,190 290,170 310,170 C 330,170 350,180 350,200 Z" />
+        </g>
+        <g fill="rgba(93, 26, 150, 0.16)">
+          <circle cx="100" cy="100" r="3" />
+          <circle cx="200" cy="100" r="3" />
+          <circle cx="300" cy="100" r="3" />
+          <circle cx="100" cy="200" r="3" />
+          <circle cx="200" cy="200" r="3" />
+          <circle cx="300" cy="200" r="3" />
+          <circle cx="100" cy="300" r="3" />
+          <circle cx="200" cy="300" r="3" />
+          <circle cx="300" cy="300" r="3" />
+        </g>
+      </svg>
+      
+      <!-- Hero card content with 3D translation layers -->
+      <div class="hero-card-content">
+        <div style="transform: translateZ(40px); transform-style: preserve-3d;">
+          <img src="logo.png" alt="Nellai Muthu Vilas" class="hero-logo-img">
+        </div>
+        <div style="transform: translateZ(25px); transform-style: preserve-3d;">
+          <h1 class="hero-logo">Nellai Muthu Vilas</h1>
+        </div>
+        <div style="transform: translateZ(20px); transform-style: preserve-3d;">
+          <p class="hero-tagline">Coimbatore's Finest Traditional Sweets</p>
+        </div>
+        <div style="transform: translateZ(15px); transform-style: preserve-3d;">
+          <p class="hero-since">✦ Since 1972 ✦</p>
+        </div>
+        <div style="transform: translateZ(45px); transform-style: preserve-3d;">
+          <a href="#sweets" class="hero-cta">Explore Our Sweets</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVOLVING WHITE TICKER BANNER -->
+<div class="ticker-wrap">
+  <div class="ticker-content">
+    <div class="ticker-item">Wedding Bulk Orders</div>
+    <div class="ticker-item">Home Delivery</div>
+    <div class="ticker-item">Festival Gift Boxes</div>
+    <div class="ticker-item">Corporate Gifting</div>
+    <div class="ticker-item">Since 1972</div>
+    <div class="ticker-item">Pure Ghee Sweets</div>
+    <!-- Duplicate items to loop seamlessly -->
+    <div class="ticker-item">Wedding Bulk Orders</div>
+    <div class="ticker-item">Home Delivery</div>
+    <div class="ticker-item">Festival Gift Boxes</div>
+    <div class="ticker-item">Corporate Gifting</div>
+    <div class="ticker-item">Since 1972</div>
+    <div class="ticker-item">Pure Ghee Sweets</div>
+  </div>
+</div>
+
+<!-- SWEETS CATALOG -->
+<section id="sweets">
+  <div class="container">
+    <div class="sweets-header-wrap">
+      <div>
+        <h2 class="section-heading js-reveal-heading">Our Sweet Collection</h2>
+        <p class="section-subtext js-reveal-sub">Crafted from authentic South Indian recipes, pure ghee, and zero artificial colours — every piece tells a story.</p>
+      </div>
+      
+      <!-- Sort & Filter Toolbar -->
+      <div class="sweets-toolbar js-reveal-sub">
+        <div class="filter-btn-group">
+          <button class="filter-btn active" onclick="filterSweets('all', this)">All</button>
+          <button class="filter-btn" onclick="filterSweets('halwa', this)">Halwa</button>
+          <button class="filter-btn" onclick="filterSweets('ladoo', this)">Ladoo</button>
+          <button class="filter-btn" onclick="filterSweets('ghee', this)">Ghee Sweets</button>
+        </div>
+        <div>
+          <label for="price-sort" class="toolbar-label">Sort by:</label>
+          <select id="price-sort" class="toolbar-select" onchange="sortSweets(this.value)">
+            <option value="default">Default</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="sweets-grid" id="sweets-grid">
+
+      <!-- SWEET 1 — Tirunelveli Wheat Halwa -->
+      <div class="sweet-card js-sweet-card" data-id="tirunelveli-halwa" data-price="380" data-tags="halwa ghee">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1666365150988-ab8f9ae92b96?w=600&q=80" alt="Tirunelveli Wheat Halwa" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Tirunelveli Wheat Halwa</span>
+          <span class="price-badge">₹ 380/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">The legendary Tirunelveli Godhumai Halwa — slow-cooked wheat, pure ghee and jaggery for a melt-in-mouth experience.</p>
+          <button class="card-btn" onclick="addToCart('tirunelveli-halwa', 'Tirunelveli Wheat Halwa', 380)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 2 — Kaju Katli -->
+      <div class="sweet-card js-sweet-card" data-id="kaju-katli" data-price="960" data-tags="cashew">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80" alt="Kaju Katli" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Kaju Katli</span>
+          <span class="price-badge">₹ 960/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Silky smooth cashew diamonds dusted in edible silver — a timeless festival favourite.</p>
+          <button class="card-btn" onclick="addToCart('kaju-katli', 'Kaju Katli', 960)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 3 — Mysore Pak -->
+      <div class="sweet-card js-sweet-card" data-id="mysore-pak" data-price="640" data-tags="ghee">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80" alt="Mysore Pak" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Mysore Pak</span>
+          <span class="price-badge">₹ 640/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Melt-in-mouth gram flour squares drenched in pure ghee — the royal sweet of South India.</p>
+          <button class="card-btn" onclick="addToCart('mysore-pak', 'Mysore Pak', 640)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 4 — Motichoor Ladoo -->
+      <div class="sweet-card js-sweet-card" data-id="motichoor-ladoo" data-price="520" data-tags="ladoo">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Motichoor Ladoo" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Motichoor Ladoo</span>
+          <span class="price-badge">₹ 520/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Tiny golden pearls of gram flour, bound with sugar syrup and cardamom into a perfect round joy.</p>
+          <button class="card-btn" onclick="addToCart('motichoor-ladoo', 'Motichoor Ladoo', 520)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 5 — Besan Ladoo -->
+      <div class="sweet-card js-sweet-card" data-id="besan-ladoo" data-price="480" data-tags="ladoo">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1610450949065-1f2841536422?w=600&q=80" alt="Besan Ladoo" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Besan Ladoo</span>
+          <span class="price-badge">₹ 480/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Roasted gram flour, ghee and sugar rolled into golden balls of pure festive bliss.</p>
+          <button class="card-btn" onclick="addToCart('besan-ladoo', 'Besan Ladoo', 480)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 6 — Palkova -->
+      <div class="sweet-card js-sweet-card" data-id="palkova" data-price="580" data-tags="milk">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Palkova" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Palkova</span>
+          <span class="price-badge">₹ 580/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Slow-reduced whole milk sweetened to creamy perfection — simple, pure and irresistible.</p>
+          <button class="card-btn" onclick="addToCart('palkova', 'Palkova', 580)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 7 — Badam Halwa -->
+      <div class="sweet-card js-sweet-card" data-id="badam-halwa" data-price="840" data-tags="halwa ghee">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=600&q=80" alt="Badam Halwa" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Badam Halwa</span>
+          <span class="price-badge">₹ 840/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Rich almond halwa slow-cooked in saffron and ghee — a luxurious treat for special occasions.</p>
+          <button class="card-btn" onclick="addToCart('badam-halwa', 'Badam Halwa', 840)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 8 — Coconut Burfi -->
+      <div class="sweet-card js-sweet-card" data-id="coconut-burfi" data-price="420" data-tags="coconut">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=600&q=80" alt="Coconut Burfi" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Coconut Burfi</span>
+          <span class="price-badge">₹ 420/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Fresh grated coconut squares with cardamom and sugar — a crisp, aromatic classic.</p>
+          <button class="card-btn" onclick="addToCart('coconut-burfi', 'Coconut Burfi', 420)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 9 — Dry Fruit Halwa -->
+      <div class="sweet-card js-sweet-card" data-id="dryfruit-halwa" data-price="720" data-tags="halwa">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Dry Fruit Halwa" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Dry Fruit Halwa</span>
+          <span class="price-badge">₹ 720/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">A premium assortment of finely chopped almonds, cashews, and raisins bound in sweet fig syrup.</p>
+          <button class="card-btn" onclick="addToCart('dryfruit-halwa', 'Dry Fruit Halwa', 720)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 10 — Ghee Laddu -->
+      <div class="sweet-card js-sweet-card" data-id="ghee-ladoo" data-price="480" data-tags="ladoo ghee">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1610450949065-1f2841536422?w=600&q=80" alt="Ghee Laddu" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Ghee Laddu</span>
+          <span class="price-badge">₹ 480/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Aromatic gram flour spheres slow-roasted in pure cow ghee and infused with fresh cardamoms.</p>
+          <button class="card-btn" onclick="addToCart('ghee-ladoo', 'Ghee Laddu', 480)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 11 — Milk Peda -->
+      <div class="sweet-card js-sweet-card" data-id="milk-peda" data-price="540" data-tags="milk">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Milk Peda" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Milk Peda</span>
+          <span class="price-badge">₹ 540/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Rich reduced condensed milk squares containing hints of pistachio and edible silver garnish.</p>
+          <button class="card-btn" onclick="addToCart('milk-peda', 'Milk Peda', 540)">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- SWEET 12 — Jangri -->
+      <div class="sweet-card js-sweet-card" data-id="jangri" data-price="420" data-tags="ghee">
+        <div class="card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80" alt="Jangri" loading="lazy">
+          <div class="img-overlay"></div>
+          <div class="img-gradient"></div>
+          <span class="card-img-name">Jangri</span>
+          <span class="price-badge">₹ 420/kg</span>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Deep-fried black gram batter loops dipped in organic rose-infused sugar syrup.</p>
+          <button class="card-btn" onclick="addToCart('jangri', 'Jangri', 420)">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-heading js-reveal-heading">About Us</h2>
+    <div class="about-grid">
+      <div>
+        <p class="section-subtext js-reveal-sub" style="max-width:100%">
+          Nellai Muthu Vilas is a family-run traditional sweet shop in the heart of Coimbatore, Tamil Nadu, bringing authentic South Indian confections to sweet lovers since 1972. Our recipes have been passed down through the family, using pure cow ghee, natural jaggery, and zero artificial colours or preservatives — ensuring every bite carries the genuine flavour of tradition.
+        </p>
+        <p class="section-subtext js-reveal-sub" style="max-width:100%;margin-top:1.2rem">
+          Famous across Coimbatore for our legendary Tirunelveli Wheat Halwa, Mysore Pak, and an extensive range of Ladoo varieties, we serve families at festivals, weddings, and everyday celebrations alike. Whether you need a single box of Kaju Katli or a bulk corporate order, Nellai Muthu Vilas delivers the same time-honoured quality every single time.
+        </p>
+        <div class="about-features">
+          <span class="about-tag">Pure Cow Ghee</span>
+          <span class="about-tag">No Artificial Colours</span>
+          <span class="about-tag">Family Recipe</span>
+          <span class="about-tag">Bulk Orders</span>
+          <span class="about-tag">Wedding Sweets</span>
+          <span class="about-tag">Corporate Gifting</span>
+          <span class="about-tag">Coimbatore Delivery</span>
+        </div>
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-num js-counter" data-target="50">0</div>
+            <div class="stat-label">Years of Legacy</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num js-counter" data-target="40">0</div>
+            <div class="stat-label">Sweet Varieties</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num js-counter" data-target="10000">0</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-photo js-reveal-right">
+        <img src="shop.png" alt="Nellai Muthu Vilas Storefront" class="about-photo-img">
+        <div class="about-photo-tag">Since 1972 — Coimbatore</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INTERACTIVE BRANCHES & LOCATIONS -->
+<section id="branches-section">
+  <div class="container">
+    <h2 class="section-heading js-reveal-heading">Our Branches</h2>
+    <p class="section-subtext js-reveal-sub">Visit us at any of our outlets across Coimbatore to enjoy the freshest traditional sweets.</p>
+    
+    <div class="branches-grid">
+      <!-- Left side: branch list -->
+      <div class="branches-list js-reveal-card">
+        
+        <!-- Branch 1 -->
+        <div class="branch-card active" data-map="https://maps.google.com/maps?q=Nellai%20Muthu%20Vilas,%20Saibaba%20Colony,%20Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" data-branch="saibaba">
+          <div class="branch-header">
+            <span class="branch-name">Saibaba Colony (Main Branch)</span>
+            <span class="branch-rating">⭐ 4.6 (Google Reviews)</span>
+          </div>
+          <p class="branch-details">
+            📍 74/2, NSR Road, Saibaba Mission, Nesavaalar Colony, Coimbatore - 641043<br>
+            📞 +91 89400 01717 | +91 95002 15001
+          </p>
+          <div class="branch-review-heading">Top Customer Review:</div>
+          <p class="branch-review-quote">"The signature Tirunelveli Halwa is absolute heaven. Warm, ghee-dripping, and perfect sweetness." - Anand K.</p>
+        </div>
+
+        <!-- Branch 2 -->
+        <div class="branch-card" data-map="https://maps.google.com/maps?q=Nellai%20Muthu%20Vilas,%20Kuniamuthur,%20Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" data-branch="kuniamuthur">
+          <div class="branch-header">
+            <span class="branch-name">Kuniamuthur Branch</span>
+            <span class="branch-rating">⭐ 4.5 (Google Reviews)</span>
+          </div>
+          <p class="branch-details">
+            📍 Palakkad Main Road, Near Kuniamuthur Bus Stop, Coimbatore - 641008<br>
+            📞 +91 95002 15001
+          </p>
+          <div class="branch-review-heading">Top Customer Review:</div>
+          <p class="branch-review-quote">"Fresh sweets every evening. Very clean shop and professional staff." - Rajesh M.</p>
+        </div>
+
+        <!-- Branch 3 -->
+        <div class="branch-card" data-map="https://maps.google.com/maps?q=Nellai%20Muthu%20Vilas,%20Sundarapuram,%20Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" data-branch="sundarapuram">
+          <div class="branch-header">
+            <span class="branch-name">Sundarapuram Branch</span>
+            <span class="branch-rating">⭐ 4.4 (Google Reviews)</span>
+          </div>
+          <p class="branch-details">
+            📍 No 305/306, Pollachi Main Road, Opp. Ayyar Hospital, Coimbatore - 641024<br>
+            📞 +91 95002 15001
+          </p>
+          <div class="branch-review-heading">Top Customer Review:</div>
+          <p class="branch-review-quote">"Excellent variety of sweets and savouries. Their ghee laddu is outstanding." - Suresh P.</p>
+        </div>
+
+        <!-- Branch 4 -->
+        <div class="branch-card" data-map="https://maps.google.com/maps?q=Nellai%20Muthu%20Vilas,%20Vadavalli,%20Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" data-branch="vadavalli">
+          <div class="branch-header">
+            <span class="branch-name">Vadavalli Branch</span>
+            <span class="branch-rating">⭐ 4.5 (Google Reviews)</span>
+          </div>
+          <p class="branch-details">
+            📍 Maruthamalai Road, Near Vadavalli Bus Stand, Vadavalli, Coimbatore - 641046<br>
+            📞 +91 95002 15001
+          </p>
+          <div class="branch-review-heading">Top Customer Review:</div>
+          <p class="branch-review-quote">"Festival packaging is wonderful. Highly recommend their badam halwa." - Deepa G.</p>
+        </div>
+
+        <!-- Branch 5 -->
+        <div class="branch-card" data-map="https://maps.google.com/maps?q=Nellai%20Muthu%20Vilas,%20Ramanathapuram,%20Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" data-branch="ramanathapuram">
+          <div class="branch-header">
+            <span class="branch-name">Ramanathapuram Branch</span>
+            <span class="branch-rating">⭐ 4.6 (Google Reviews)</span>
+          </div>
+          <p class="branch-details">
+            📍 Trichy Road, Ramanathapuram, Coimbatore - 641045<br>
+            📞 +91 95002 15001
+          </p>
+          <div class="branch-review-heading">Top Customer Review:</div>
+          <p class="branch-review-quote">"Pure cow ghee sweets that represent the true taste of South Indian legacy." - Vignesh W.</p>
+        </div>
+
+      </div>
+
+      <!-- Right side: Map iframe with 3D cloud designs -->
+      <div class="map-container js-reveal-right">
+        <!-- Cloud 1 (Top Left) -->
+        <div class="cloud-parallax-wrap" style="left: -90px; top: -50px; z-index: 10;">
+          <svg class="floating-cloud" style="width: 180px; height: auto;" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+            <path class="cloud-glass" d="M 50,130 A 40,40 0 0,1 60,50 A 50,50 0 0,1 150,30 A 40,40 0 0,1 210,60 A 30,30 0 0,1 260,100 A 30,30 0 0,1 240,140 L 70,140 A 30,30 0 0,1 50,130 Z" />
+          </svg>
+        </div>
+        
+        <!-- Cloud 2 (Bottom Right) -->
+        <div class="cloud-parallax-wrap" style="right: -120px; bottom: -70px; z-index: 10;">
+          <svg class="floating-cloud" style="width: 240px; height: auto; animation-delay: -3s;" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+            <path class="cloud-glass" d="M 50,130 A 40,40 0 0,1 60,50 A 50,50 0 0,1 150,30 A 40,40 0 0,1 210,60 A 30,30 0 0,1 260,100 A 30,30 0 0,1 240,140 L 70,140 A 30,30 0 0,1 50,130 Z" />
+          </svg>
+        </div>
+
+        <!-- Cloud 3 (Top Right) -->
+        <div class="cloud-parallax-wrap" style="right: -75px; top: 60px; z-index: 2;">
+          <svg class="floating-cloud" style="width: 150px; height: auto; animation-delay: -1.5s; opacity: 0.7;" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+            <path class="cloud-glass" d="M 50,130 A 40,40 0 0,1 60,50 A 50,50 0 0,1 150,30 A 40,40 0 0,1 210,60 A 30,30 0 0,1 260,100 A 30,30 0 0,1 240,140 L 70,140 A 30,30 0 0,1 50,130 Z" />
+          </svg>
+        </div>
+
+        <iframe class="map-iframe" id="branch-map" src="https://maps.google.com/maps?q=Nellai%20Muthu%20Vilas,%20Saibaba%20Colony,%20Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <h2 class="section-heading js-reveal-heading">What Our Customers Say</h2>
+    <p class="section-subtext js-reveal-sub">Real reviews from local families who trust us for their sweetest celebrations.</p>
+    <div class="testimonials-grid">
+
+      <div class="testi-card js-testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The Tirunelveli Halwa from Nellai Muthu Vilas is absolutely unmatched in Coimbatore. The texture, the aroma of pure ghee — it transported me straight back to my childhood in Tirunelveli."</p>
+        <div class="testi-author">— Anand K.</div>
+        <div class="testi-location">Saibaba Colony, Coimbatore</div>
+      </div>
+
+      <div class="testi-card js-testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Ordered 10 kg of assorted sweets for our daughter's wedding. Every guest was raving about the Mysore Pak and Kaju Katli. The quality and packaging were both excellent. Highly recommended!"</p>
+        <div class="testi-author">— Deepa G.</div>
+        <div class="testi-location">RS Puram, Coimbatore</div>
+      </div>
+
+      <div class="testi-card js-testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"We have been placing our Diwali corporate gift orders with Nellai Muthu Vilas for years. The sweets always arrive fresh, beautifully boxed, and our clients absolutely love them."</p>
+        <div class="testi-author">— Vignesh W.</div>
+        <div class="testi-location">Peelamedu, Coimbatore</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-heading js-reveal-heading">Visit Us / Get in Touch</h2>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-item js-contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-val">Nellai Muthu Vilas<br>74/2, NSR Road, Saibaba Mission,<br>Nesavaalar Colony, Saibaba Colony,<br>Coimbatore – 641043, Tamil Nadu</div>
+          </div>
+        </div>
+        <div class="contact-info-item js-contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-val">+91 89400 01717<br>+91 95002 15001</div>
+          </div>
+        </div>
+        <div class="contact-info-item js-contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">info@nellaimuthu.com</div>
+          </div>
+        </div>
+        <div class="contact-info-item js-contact-item">
+          <span class="contact-icon">🕐</span>
+          <div>
+            <div class="contact-label">Opening Hours</div>
+            <div class="contact-val">Mon – Sat: 8:00 AM – 9:00 PM<br>Sun: 9:00 AM – 6:00 PM</div>
+          </div>
+        </div>
+        <div class="contact-info-item js-contact-item">
+          <span class="contact-icon">🌐</span>
+          <div>
+            <div class="contact-label">Follow Us</div>
+            <div class="contact-val">
+              <a href="https://wa.me/919500215001" target="_blank" style="color:var(--accent-light)">WhatsApp</a> &nbsp;|&nbsp;
+              <a href="https://www.instagram.com/moondrukambam.nellaimuthuvilas/" target="_blank" style="color:var(--accent-light)">Instagram</a> &nbsp;|&nbsp;
+              <a href="#" style="color:var(--accent-light)">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group js-contact-item">
+            <label for="name-input">Your Name</label>
+            <input type="text" id="name-input" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group js-contact-item">
+            <label for="contact-input">Phone / Email</label>
+            <input type="text" id="contact-input" placeholder="Phone number or email address" required>
+          </div>
+          <div class="form-group js-contact-item">
+            <label for="enquiry-select">Enquiry Type</label>
+            <select id="enquiry-select">
+              <option>General Enquiry</option>
+              <option>Bulk / Wedding Order</option>
+              <option>Corporate Gifting</option>
+              <option>Home Delivery</option>
+              <option>Custom Sweet Box</option>
+            </select>
+          </div>
+          <div class="form-group js-contact-item">
+            <label for="message-textarea">Message</label>
+            <textarea id="message-textarea" placeholder="Tell us what you need and we'll get back to you!"></textarea>
+          </div>
+          <button type="submit" class="form-submit js-contact-item">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="logo.png" alt="Nellai Muthu Vilas" class="footer-brand-logo">
+        <div class="footer-brand-name">Nellai Muthu Vilas</div>
+      </div>
+      <p class="footer-brand-desc">Coimbatore's finest traditional sweets since 1972, crafted with pure ghee and passed-down recipes for generations. Every sweet is a celebration.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Our Sweets</h4>
+      <ul>
+        <li><a href="#sweets">Tirunelveli Halwa</a></li>
+        <li><a href="#sweets">Kaju Katli</a></li>
+        <li><a href="#sweets">Mysore Pak</a></li>
+        <li><a href="#sweets">Ladoo Varieties</a></li>
+        <li><a href="#sweets">Palkova</a></li>
+        <li><a href="#sweets">Badam Halwa</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#sweets">Wedding Bulk Orders</a></li>
+        <li><a href="#sweets">Festival Gift Boxes</a></li>
+        <li><a href="#sweets">Corporate Gifting</a></li>
+        <li><a href="#sweets">Home Delivery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonials">Customer Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Nellai Muthu Vilas, Coimbatore. All rights reserved.</span>
+    <div class="footer-stars">
+      <span>✦</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY FLOATING SOCIAL MEDIA PANEL -->
+<div class="floating-social-panel">
+  <!-- WhatsApp button with official SVG logo -->
+  <a href="https://wa.me/919500215001" target="_blank" class="float-social-btn float-whatsapp" title="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="26" height="26" fill="#FFFFFF">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+  </a>
+  <!-- Instagram button with official SVG logo -->
+  <a href="https://www.instagram.com/moondrukambam.nellaimuthuvilas/" target="_blank" class="float-social-btn float-instagram" title="Follow on Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="#FFFFFF">
+      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2s34.4-58 36.2-93.9c2.1-37 2.1-147.9 0-184.9zm-47 228.1c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- Back to top -->
+<div id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<!-- SHOPPING CART DRAWER -->
+<div class="cart-drawer-overlay" id="cart-overlay" onclick="toggleCartDrawer(false)"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header">
+    <div class="cart-title">Your Sweet Cart</div>
+    <button class="cart-close-btn" onclick="toggleCartDrawer(false)">✕</button>
+  </div>
+  
+  <div class="cart-items-list" id="cart-items-container">
+    <div class="cart-empty-message">Your cart is empty. Add some delicious traditional sweets!</div>
+  </div>
+  
+  <!-- Delivery Details Form (Required for checkout) -->
+  <div class="cart-delivery-form">
+    <div class="cart-delivery-title">Delivery Details</div>
+    <div class="cart-form-group">
+      <label for="cart-name">Name *</label>
+      <input type="text" id="cart-name" class="cart-form-input" placeholder="Enter your name" required>
+    </div>
+    <div class="cart-form-group">
+      <label for="cart-address">Address *</label>
+      <textarea id="cart-address" class="cart-form-textarea" placeholder="Street Name, Area Name, PIN Code" required></textarea>
+    </div>
+  </div>
+  
+  <div class="cart-footer">
+    <div class="cart-summary-row">
+      <span>Total:</span>
+      <span id="cart-grand-total">₹ 0</span>
+    </div>
+    <button class="cart-checkout-btn" onclick="checkoutCart()">Confirm & Checkout</button>
+  </div>
+</div>
+
+<!-- CHECKOUT SUCCESS MODAL (🎉 emoji removed) -->
+<div class="modal-overlay" id="checkout-modal-overlay">
+  <div class="checkout-modal">
+    <span class="modal-success-icon">✓</span>
+    <div class="modal-title">Order Confirmed!</div>
+    <p class="modal-desc">Thank you for ordering with Nellai Muthu Vilas. Your order request has been received on the frontend! Backend integration will be processed shortly.</p>
+    <div class="modal-summary-box">
+      <div class="modal-summary-title">Delivery Information</div>
+      <div style="font-size: 0.88rem; margin-bottom: 0.8rem; line-height: 1.4;" id="modal-delivery-info"></div>
+      
+      <div class="modal-summary-title">Order Summary</div>
+      <div class="modal-summary-items" id="modal-items-summary"></div>
+      <div class="modal-summary-total" id="modal-total-summary">Total: ₹ 0</div>
+    </div>
+    <button class="modal-close-btn" onclick="closeCheckoutModal()">Done</button>
+  </div>
+</div>
+
+<script>
+/* ===== PAGE LOAD SEQUENCE ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => document.body.classList.add('loaded'), 100);
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+  initCart();
+});
+
+/* ===== NAVBAR SCROLL SHRINK & PARALLAX HERO ANIMATION ===== */
+// MouseMove 3D Tilt Effect on Hero Card Frame
+const hero = document.getElementById('hero');
+const heroCardFrame = document.querySelector('.hero-card-frame');
+if (hero && heroCardFrame) {
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = e.clientX - rect.left - (rect.width / 2);
+    const y = e.clientY - rect.top - (rect.height / 2);
+    
+    // Rotate card frame slightly based on mouse x and y offsets
+    const rotateX = -(y / (rect.height / 2)) * 10;
+    const rotateY = (x / (rect.width / 2)) * 10;
+    
+    heroCardFrame.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    heroCardFrame.style.transition = 'transform 0.1s ease-out';
+  });
+  
+  hero.addEventListener('mouseleave', () => {
+    heroCardFrame.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    heroCardFrame.style.transition = 'transform 0.5s ease-out';
+  });
+}
+
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  const backTop = document.getElementById('back-top');
+  const mobileCartBtn = document.getElementById('mobile-cart-btn');
+  
+  const scrollPos = window.scrollY;
+  
+  // Navbar Shrink & Back to Top Toggle
+  if (scrollPos > 80) {
+    nav.classList.add('shrunk');
+    backTop.classList.add('show');
+    if (window.innerWidth <= 640) {
+      mobileCartBtn.style.display = 'flex';
+    }
+  } else {
+    nav.classList.remove('shrunk');
+    backTop.classList.remove('show');
+    mobileCartBtn.style.display = 'none';
+  }
+  
+  // Custom Parallax Scroll Easing Reveal Animation for Hero Card Frame and Background
+  if (scrollPos <= window.innerHeight) {
+    const heroContent = document.querySelector('.hero-content');
+    const heroBg = document.querySelector('.hero-bg');
+    const heroGlow = document.querySelector('.hero-glow');
+    
+    if (heroContent) {
+      // Translate the card wrapper vertically on scroll
+      heroContent.style.transform = `translateY(${scrollPos * 0.4}px)`;
+      heroContent.style.opacity = Math.max(1 - (scrollPos / 600), 0);
+    }
+    
+    if (heroBg) {
+      // Background translates slower to create deep depth separation
+      heroBg.style.transform = `scale(${1 + scrollPos * 0.0003}) translateY(${scrollPos * 0.12}px)`;
+    }
+    if (heroGlow) {
+      heroGlow.style.opacity = Math.max(0.6 - (scrollPos / 800), 0);
+    }
+  }
+});
+
+/* ===== INTERSECTION OBSERVER — Reveal on Scroll ===== */
+const observerOptions = {
+  threshold: 0.15,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const siblings = el.parentElement ? Array.from(el.parentElement.children).filter(c => c.classList.contains(el.classList[0])) : [];
+      const siblingIndex = siblings.indexOf(el);
+      const delay = siblingIndex * 100;
+
+      setTimeout(() => {
+        el.classList.add('visible');
+      }, delay);
+
+      revealObserver.unobserve(el);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.js-reveal-heading, .js-reveal-sub, .js-reveal-card, .js-sweet-card, .js-testi-card, .js-contact-item, .js-reveal-right').forEach(el => {
+  revealObserver.observe(el);
+});
+
+const footerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      footerObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+const footer = document.getElementById('footer');
+if (footer) footerObserver.observe(footer);
+
+/* ===== COUNTER ANIMATION ===== */
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-target'));
+      const duration = 2000;
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+
+        if (target >= 10000) {
+          el.textContent = current.toLocaleString() + '+';
+        } else {
+          el.textContent = current + '+';
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          if (target >= 10000) {
+            el.textContent = target.toLocaleString() + '+';
+          } else {
+            el.textContent = target + '+';
+          }
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.js-counter').forEach(el => {
+  counterObserver.observe(el);
+});
+
+/* ===== SMOOTH SCROLL FOR NAV LINKS ===== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    const targetEl = document.querySelector(targetId);
+    if (targetEl) {
+      e.preventDefault();
+      const navHeight = document.getElementById('navbar').offsetHeight;
+      const targetPos = targetEl.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top: targetPos, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ===== FORM SUBMISSION HANDLER ===== */
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    showToast('Thank you! Your message has been sent. We\'ll get back to you soon.');
+    contactForm.reset();
+  });
+}
+
+/* ===== TOAST NOTIFICATION ===== */
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}
+
+/* ===== ACTIVE NAV LINK HIGHLIGHT ===== */
+const sections = document.querySelectorAll('section[id], footer[id]');
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY + 100;
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
+    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+    if (link) {
+      if (scrollPos >= top && scrollPos < top + height) {
+        link.style.color = '#fff';
+      } else {
+        link.style.color = '';
+      }
+    }
+  });
+});
+
+/* ===== KEYBOARD ACCESSIBILITY ===== */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById('mobile-nav').classList.remove('open');
+    toggleCartDrawer(false);
+    closeCheckoutModal();
+  }
+});
+
+/* ===== BRANCH MAP SELECTOR & REVIEWS INTERACTION ===== */
+document.querySelectorAll('.branch-card').forEach(card => {
+  card.addEventListener('click', function() {
+    document.querySelectorAll('.branch-card').forEach(c => c.classList.remove('active'));
+    this.classList.add('active');
+
+    const mapUrl = this.getAttribute('data-map');
+    const mapIframe = document.getElementById('branch-map');
+    if (mapIframe && mapUrl) {
+      mapIframe.src = mapUrl;
+    }
+
+    if (window.innerWidth <= 900) {
+      mapIframe.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
+});
+
+// Interactive 3D Cloud Parallax on MouseMove in Branches Section
+const branchesSection = document.getElementById('branches-section');
+const cloudWraps = document.querySelectorAll('.cloud-parallax-wrap');
+if (branchesSection && cloudWraps.length > 0) {
+  branchesSection.addEventListener('mousemove', (e) => {
+    const rect = branchesSection.getBoundingClientRect();
+    const x = e.clientX - rect.left - (rect.width / 2);
+    const y = e.clientY - rect.top - (rect.height / 2);
+    
+    cloudWraps.forEach((cloudWrap, index) => {
+      // Different speed for each cloud to create 3D depth separation
+      const speed = (index + 1) * 0.04;
+      const tx = x * speed;
+      const ty = y * speed;
+      
+      cloudWrap.style.transform = `translate(${tx}px, ${ty}px)`;
+    });
+  });
+  
+  branchesSection.addEventListener('mouseleave', () => {
+    cloudWraps.forEach(cloudWrap => {
+      cloudWrap.style.transform = 'translate(0px, 0px)';
+    });
+  });
+}
+
+/* ===== SWEETS CATALOG SEARCH ===== */
+const searchInput = document.getElementById('header-search');
+if (searchInput) {
+  searchInput.addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase().trim();
+    const sweetCards = document.querySelectorAll('#sweets-grid .sweet-card');
+    
+    sweetCards.forEach(card => {
+      const name = card.querySelector('.card-img-name').textContent.toLowerCase();
+      const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+      
+      if (name.includes(query) || desc.includes(query)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+}
+
+/* ===== SWEETS CATALOG SORT & FILTER ===== */
+let activeFilter = 'all';
+
+function filterSweets(tag, btnEl) {
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  btnEl.classList.add('active');
+  
+  activeFilter = tag;
+  applyFiltersAndSort();
+}
+
+function sortSweets(order) {
+  applyFiltersAndSort();
+}
+
+function applyFiltersAndSort() {
+  const sweetsGrid = document.getElementById('sweets-grid');
+  const cards = Array.from(sweetsGrid.querySelectorAll('.sweet-card'));
+  const sortValue = document.getElementById('price-sort').value;
+  
+  cards.forEach(card => {
+    const tags = card.getAttribute('data-tags') || '';
+    if (activeFilter === 'all' || tags.includes(activeFilter)) {
+      card.setAttribute('data-filtered', 'true');
+      card.style.display = 'block';
+    } else {
+      card.setAttribute('data-filtered', 'false');
+      card.style.display = 'none';
+    }
+  });
+  
+  if (sortValue !== 'default') {
+    cards.sort((a, b) => {
+      const priceA = parseFloat(a.getAttribute('data-price'));
+      const priceB = parseFloat(b.getAttribute('data-price'));
+      
+      return sortValue === 'price-low' ? priceA - priceB : priceB - priceA;
+    });
+    
+    cards.forEach(card => sweetsGrid.appendChild(card));
+  }
+}
+
+/* ===== SHOPPING CART DRAWER LOGIC ===== */
+let cart = [];
+
+function initCart() {
+  const storedCart = localStorage.getItem('nellai_cart');
+  if (storedCart) {
+    try {
+      cart = JSON.parse(storedCart);
+      updateCartUI();
+    } catch(e) {
+      cart = [];
+    }
+  }
+}
+
+function saveCart() {
+  localStorage.setItem('nellai_cart', JSON.stringify(cart));
+  updateCartUI();
+}
+
+function toggleCartDrawer(open) {
+  const overlay = document.getElementById('cart-overlay');
+  const drawer = document.getElementById('cart-drawer');
+  
+  if (open) {
+    overlay.classList.add('open');
+    drawer.classList.add('open');
+  } else {
+    overlay.classList.remove('open');
+    drawer.classList.remove('open');
+  }
+}
+
+function addToCart(id, name, price) {
+  const existingItem = cart.find(item => item.id === id);
+  if (existingItem) {
+    existingItem.qty += 1;
+  } else {
+    cart.push({ id, name, price, qty: 1 });
+  }
+  
+  saveCart();
+  showToast(`${name} added to your cart! 🛒`);
+  
+  const btn = document.querySelector(`.sweet-card[data-id="${id}"] .card-btn`);
+  if (btn) {
+    btn.textContent = '✓ Added';
+    btn.style.background = 'var(--accent-dark)';
+    btn.style.borderColor = 'var(--accent-dark)';
+    setTimeout(() => {
+      btn.textContent = 'Add to Cart';
+      btn.style.background = '';
+      btn.style.borderColor = '';
+    }, 1200);
+  }
+}
+
+function updateQty(id, delta) {
+  const item = cart.find(item => item.id === id);
+  if (item) {
+    item.qty += delta;
+    if (item.qty <= 0) {
+      cart = cart.filter(i => i.id !== id);
+    }
+    saveCart();
+  }
+}
+
+function removeCartItem(id) {
+  cart = cart.filter(item => item.id !== id);
+  saveCart();
+}
+
+function updateCartUI() {
+  const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+  
+  document.getElementById('cart-counter').textContent = totalCount;
+  document.getElementById('mobile-cart-counter').textContent = totalCount;
+  
+  const container = document.getElementById('cart-items-container');
+  container.innerHTML = '';
+  
+  if (cart.length === 0) {
+    container.innerHTML = '<div class="cart-empty-message">Your cart is empty. Add some delicious traditional sweets!</div>';
+    document.getElementById('cart-grand-total').textContent = '₹ 0';
+    return;
+  }
+  
+  let grandTotal = 0;
+  
+  cart.forEach(item => {
+    const itemTotal = item.price * item.qty;
+    grandTotal += itemTotal;
+    
+    const itemEl = document.createElement('div');
+    itemEl.className = 'cart-item';
+    itemEl.innerHTML = `
+      <div class="cart-item-details">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price-unit">₹ ${item.price}/kg</div>
+      </div>
+      <div class="cart-qty-control">
+        <button class="cart-qty-btn" onclick="updateQty('${item.id}', -1)">-</button>
+        <span class="cart-qty-val">${item.qty}</span>
+        <button class="cart-qty-btn" onclick="updateQty('${item.id}', 1)">+</button>
+      </div>
+      <button class="cart-item-remove" onclick="removeCartItem('${item.id}')">✕</button>
+    `;
+    container.appendChild(itemEl);
+  });
+  
+  document.getElementById('cart-grand-total').textContent = `₹ ${grandTotal}`;
+}
+
+/* ===== FRONTEND CHECKOUT FLOW ===== */
+function checkoutCart() {
+  if (cart.length === 0) {
+    showToast('Your cart is empty!');
+    return;
+  }
+  
+  // Validate Delivery details
+  const name = document.getElementById('cart-name').value.trim();
+  const address = document.getElementById('cart-address').value.trim();
+  
+  if (!name || !address) {
+    showToast('Please fill out Name and Address details to checkout!');
+    return;
+  }
+  
+  // Render details inside modal
+  const summaryContainer = document.getElementById('modal-items-summary');
+  summaryContainer.innerHTML = '';
+  
+  let total = 0;
+  cart.forEach(item => {
+    const itemCost = item.price * item.qty;
+    total += itemCost;
+    
+    const summaryItem = document.createElement('div');
+    summaryItem.style.display = 'flex';
+    summaryItem.style.justify = 'space-between';
+    summaryItem.style.marginBottom = '0.3rem';
+    summaryItem.innerHTML = `
+      <span>${item.name} (${item.qty} kg)</span>
+      <span>₹ ${itemCost}</span>
+    `;
+    summaryContainer.appendChild(summaryItem);
+  });
+  
+  document.getElementById('modal-total-summary').textContent = `Total Amount: ₹ ${total}`;
+  document.getElementById('modal-delivery-info').innerHTML = `
+    <strong>Name:</strong> ${name}<br>
+    <strong>Address:</strong> ${address}
+  `;
+  
+  toggleCartDrawer(false);
+  document.getElementById('checkout-modal-overlay').classList.add('open');
+  
+  // Reset form and empty local cart
+  document.getElementById('cart-name').value = '';
+  document.getElementById('cart-address').value = '';
+  cart = [];
+  saveCart();
+}
+
+function closeCheckoutModal() {
+  document.getElementById('checkout-modal-overlay').classList.remove('open');
+}
+</script>
+
+</body>
+</html>
